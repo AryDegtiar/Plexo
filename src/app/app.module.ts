@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ActividadesComponent } from './actividades/actividades.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { ContactoComponent } from './contacto/contacto.component';
 
 
@@ -22,6 +22,7 @@ import { ContactoComponent } from './contacto/contacto.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
 
   ],
   providers: [],

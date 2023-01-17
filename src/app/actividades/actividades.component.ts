@@ -1,11 +1,26 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ProductosService } from './../servicios/productos.service';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-actividades',
   templateUrl: './actividades.component.html',
   styleUrls: ['./actividades.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
-export class ActividadesComponent {
+export class ActividadesComponent implements OnInit {
+
+  productos: any[] = [];
+
+  constructor(private productosService : ProductosService) { }
+
+  ngOnInit(): void {
+    this.productosService.getProductos().subscribe((data: any) => {
+      this.productos = data.content;
+      console.log(this.productos)
+    });
+  }
+
+
+
 
 }
