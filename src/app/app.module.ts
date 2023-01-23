@@ -8,6 +8,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ActividadesComponent } from './actividades/actividades.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactoComponent } from './contacto/contacto.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -18,11 +19,12 @@ import { ContactoComponent } from './contacto/contacto.component';
     InicioComponent,
     ActividadesComponent,
     ContactoComponent,
+    LoginComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    BrowserModule, //importo el modulo de browser, que sirve para que la app funcione en el navegador
+    AppRoutingModule, //importo el modulo de rutas, que sirve para configurar las rutas de la app y poder navegar entre ellas
+    HttpClientModule //importo el modulo httpclientmodule, que sirve para hacer peticiones http
 
   ],
   providers: [],

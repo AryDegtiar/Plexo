@@ -5,12 +5,12 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ProductosService {
-  url = 'http://localhost:8081/productos';
+  url = 'http://localhost:8081/productos'; //url de la api de productos
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) { //como parametro del constructor le paso el httpclient, para poder hacer peticiones http
   }
 
-  getProductos() {
-    return this.http.get(this.url);
+  getProductos() { //creo un metodo que me devuelva los productos
+    return this.http.get(this.url); //hago una peticion get a la url de la api de productos,que me devuelve un observable con los productos
   }
 }
