@@ -27,11 +27,12 @@ section {
 }
 
 h1 {
-  line-height: 2.5rem;
+  line-height: 3.2rem;
   font-weight: bold;
   font-size: 4rem;
-  background-color: rgb(88, 226, 208);
+  background-color: rgba(0, 0, 0, 0);
   padding: 1rem;
+
 }
 
 h2 {

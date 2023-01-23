@@ -9,6 +9,7 @@ import { ActividadesComponent } from './actividades/actividades.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LoginComponent } from './login/login.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LoginComponent } from './login/login.component';
     ActividadesComponent,
     ContactoComponent,
     LoginComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule, //importo el modulo de browser, que sirve para que la app funcione en el navegador

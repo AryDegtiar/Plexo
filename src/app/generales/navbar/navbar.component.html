@@ -1,16 +1,38 @@
- <!-- Navbar -->
- <div id="navbar" class="border-bottom">
-  <header class="d-flex flex-wrap justify-content-center py-3 container">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-          <span class="fs-4">Chakana</span>
-      </a>
-
-      <ul class="nav nav-pills">
-          <li class="nav-item"><a routerLink="" class="nav-link text-white" aria-current="page"><b>INTRO</b></a></li>
-          <li class="nav-item"><a routerLink="/actividades" class="nav-link text-white"><b>ACTIVIDADES</b></a></li>
-          <li class="nav-item"><a routerLink="/contacto" class="nav-link text-white"><b>CONTACTO</b></a></li>
-          <li class="nav-item"><a routerLink="/login" class="nav-link text-white"><b>LOGIN</b></a></li>
-      </ul>
-  </header>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+  <div class="container" >
+    <a class="navbar-brand" routerLink="/">Chakana</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" [ngClass]="{'active': inicioActivo}" (click)="irInicio()">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              [ngClass]="{'active': serviciosActivo}">
+                Servicios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="irServicios('actividades')">Acticidades</a></li>
+                <li><a class="dropdown-item" (click)="irServicios('blog')">Blog</a></li>
+                <li><a class="dropdown-item" (click)="irServicios('tienda')">Tienda</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': contactoActivo}" (click)="irContacto()">Contacto</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': loginActivo}" (click)="irLogin()">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
   </div>
+</nav>
